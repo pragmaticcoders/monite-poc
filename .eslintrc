@@ -1,0 +1,98 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "plugins": ["react"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error", "info"]
+      }
+    ],
+    "no-debugger": "warn",
+    "no-unused-vars": [
+      "warn",
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
+    "require-yield": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-useless-return": "warn",
+    "no-return-await": "warn",
+    "no-with": "error",
+    "require-await": "warn",
+    "yoda": "error",
+    "no-new": "error",
+    "no-loop-func": "error",
+    "array-callback-return": "error",
+    "dot-notation": "error",
+    "eqeqeq": [
+      "error",
+      "always",
+      {
+        "null": "ignore"
+      }
+    ],
+    "no-alert": "warn",
+    "prefer-rest-params": "error",
+    "prefer-template": "warn",
+    "prefer-spread": "warn",
+    "prefer-destructuring": "warn",
+    "prefer-const": "warn",
+    "prefer-arrow-callback": "warn",
+    "no-var": "error",
+    "no-duplicate-imports": "warn",
+    "no-useless-rename": "warn",
+    "object-shorthand": "warn",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/ban-types": ["error",
+      {
+        "types": {
+          "object": false,
+          "Function": false
+        },
+        "extendDefaults": true
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-empty-function": "off"
+  },
+  "globals": {
+    "console": false,
+    "process": false,
+    "IS_PRODUCTION": false,
+    "IS_DEVELOPMENT": false,
+    "check": true,
+    "gen": true
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    }
+  ]
+}
